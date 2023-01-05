@@ -1,0 +1,33 @@
+package java_project;
+import java.util.*;
+class Bunny{
+	public Bunny() {
+		System.out.println("hello lanja");
+		}
+	public Bunny(int a,int b, int c) {
+		c=a+b;
+		System.out.println(c);
+		}
+	public Bunny(int a,int b) {
+		if(a>b);
+		System.out.println("a is big");
+		if(a<b);
+		System.out.println("b is big");
+		}
+
+	
+}
+
+public class construction {
+
+	public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	int a,b,c;
+	System.out.println("enter a,b values");
+	a=b=c=s.nextInt();
+	 Bunny k=new Bunny();
+	 Bunny p=new Bunny(a,b);
+     Bunny z=new Bunny(a,b,c);
+	}
+
+}

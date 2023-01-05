@@ -1,0 +1,13 @@
+package java_project;
+
+class gani{
+	public static void light() {
+		System.out.println("hello projector");
+	}
+}
+public class second {
+	public static void main(String args[])
+	{
+		gani.light();
+	}
+}

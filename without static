@@ -1,0 +1,14 @@
+package java_project;
+
+class Projector{
+	public void light() {
+		System.out.println("hello projector");
+	}
+}
+public class first {
+	public static void main(String args[])
+	{
+		Projector k=new Projector();
+		k.light();
+	}
+}

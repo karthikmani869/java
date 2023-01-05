@@ -1,0 +1,20 @@
+package java_project;
+import java.util.*;
+public class scadd {
+
+	public static void main(String[] args) {
+
+		Scanner s=new Scanner(System.in);
+		int a,b;
+		System.out.println("enter a value");
+		a=s.nextInt();
+		System.out.println("enter b value");
+		b=s.nextInt();
+		if(a>b)
+			System.out.println("a is big");
+			else
+			System.out.println("b is big");
+
+	}
+
+}

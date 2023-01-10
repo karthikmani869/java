@@ -1,0 +1,82 @@
+package bunny;
+import java.util.*;
+class KLU
+{
+	public void bunny(int n)
+
+{
+		int a,b,c;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter a,b values ");
+		a=s.nextInt();
+		b=s.nextInt();
+		switch(n)
+		{
+		case 1: System.out.println(a+b);
+		break;
+		case 2: System.out.println(a-b);
+		break;
+		case 3: System.out.println(a*b);
+		break;
+		case 5: System.out.println(a%b);
+		break;
+		default:System.out.println("wrong option");
+		
+		}
+}
+}
+class FED extends KLU
+{
+	public void palindrome(int p)
+	{
+		int z,r,x=0;
+		z=p;
+		while(p>0) 
+		{
+			r=p%10;
+			x=x*10+r;
+			p=p/10;		
+		}
+	
+	if(x==z)
+		System.out.println("palindrome");
+	else {
+		System.out.println("not a palindrome");
+		}
+}
+}
+class RND extends KLU
+{
+	public void fibanocci(int x)
+	{
+		int a=0,b=1,c;
+		System.out.println(a+"  "+b);
+		for(int i=2;i<=x;i++)
+		{
+			c=a+b;
+			System.out.println(c);
+			a=b;
+			b=c;
+			
+		}
+		
+	}
+}
+
+public class muliti_inheritance 
+{
+	public static void main(String args[])
+	{
+		KLU k=new KLU();
+		FED f=new FED();
+		RND r=new RND();
+		int n,p,x;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter n,p,x values");
+		n=p=x=s.nextInt();
+		r.bunny(n);
+		
+		
+	}
+}
+

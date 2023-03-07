@@ -1,0 +1,57 @@
+package sunny;
+
+import java.util.Scanner;
+
+interface lasya
+{
+	public void mani();
+	public void mani(int a);
+	public void meda();
+}
+interface kuppa
+{
+	public void read();
+}
+class qq implements kuppa,lasya
+{
+	public void mani()
+	{
+		System.out.println("hello lasya topper");
+	}
+    public void meda()
+    {
+		System.out.println("hello");
+
+    }
+    public void read()
+    {
+		System.out.println("hello karthik");
+
+    }
+    public void mani(int a)
+    {
+    	Scanner s=new Scanner(System.in);
+    	System.out.println("enter a");
+    	a=s.nextInt();
+    	if(a%2==0)
+    	{
+    		System.out.println("even");
+    	}
+    	else
+    	{
+    		System.out.println("odd");
+    	}
+    }
+}
+public class inter_multi 
+{
+	public static void main(String[] args) 
+	{
+		qq in=new qq();
+		in.meda();
+		in.mani();
+		in.read();
+		in.mani(0);
+	}
+
+}

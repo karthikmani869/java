@@ -1,0 +1,32 @@
+package bunny;
+import java.util.ArrayList;
+class harry
+{
+	private int id;
+	private String name;
+	public harry(int id, String name) 
+	{
+		this.name = name;
+		this.id = id;
+	}
+	
+	public String toString() {
+		return "harry [id=" + id + ", name=" + name + "]";
+	}
+	
+	
+		
+}
+public class array_list {
+
+	public static void main(String[] args) {
+		ArrayList<harry> k= new ArrayList<harry>();
+	k.add(new harry(123,"bunny"));
+	k.add(new harry(124,"gun"));
+	k.add(new harry(123,"sai"));
+	k.add(new harry(129,"banthulu"));
+	System.out.print(k);
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+package java_project;
+import java.util.*;
+class banthulu
+{
+	private int id;
+	private String name;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String toString() {
+		return " [id=" + id + ", name=" + name + "]";
+	}
+	
+}
+
+public class arrayof_obj 
+{
+
+	public static void main(String[] args) 
+{
+	banthulu k[]=new banthulu[2];
+	int i;
+	for(i=0;i<k.length;i++)
+	{
+		k[i]=new banthulu();
+	}
+	Scanner s=new Scanner(System.in);
+	int id;
+	String name;
+	for(i=0;i<k.length;i++)
+	{
+		id=s.nextInt();
+		name=s.next();
+		k[i].setId(id);
+		k[i].setName(name);
+	}
+	for(i=0;i<k.length;i++)
+System.out.println(k[i]);
+}
+
+}

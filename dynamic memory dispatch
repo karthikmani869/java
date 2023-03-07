@@ -1,0 +1,41 @@
+package bunny;
+class sai
+{
+	public void bunny() 
+	{
+		System.out.println("hello");
+	}
+	
+}
+class sai2 extends sai
+{
+	public void bunny() 
+	{
+		System.out.println("bye");
+	}
+}
+class sai3 extends sai
+{
+	public void bunny() 
+	{
+		System.out.println("hi");
+	}
+}
+public class dynamic_meomry_dispacth {
+
+	public static void main(String[] args) 
+	{
+		sai k=new sai();
+		sai3 f=new sai3();
+		sai2 c=new sai2();
+		sai y;
+		y=k;
+		y.bunny();
+		y=f;
+				y.bunny();
+				y=c;
+				y.bunny();
+
+	}
+
+}

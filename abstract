@@ -1,0 +1,42 @@
+package bunny;
+
+import java.util.Scanner;
+
+abstract class daddy
+{
+	public abstract void hmm();
+}
+class sunny extends daddy
+{
+	public void hmm()
+	{
+		int a,b,c=0;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter a,b,c");
+	    a=s.nextInt();
+	    b=s.nextInt();
+	    c=s.nextInt();
+		c=a+b;
+		System.out.println(c);
+	}
+}
+class tharun extends daddy
+{
+	public void hmm()
+	{
+		System.out.println("hello ");
+	}
+}
+public class abstra 
+{
+public static void mai(String args[])
+{
+sunny k=new sunny();
+tharun j=new tharun();
+j.hmm();
+k.hmm();
+	
+    
+	
+}
+}

@@ -1,0 +1,73 @@
+package sunny;
+
+import java.util.Scanner;
+
+abstract class movie
+{
+	public abstract void hero();
+	public abstract void heroine();
+	public void director( String name)
+	{
+		System.out.println(name);
+	}
+}
+interface restarent
+{
+	public  void food(String name);
+	
+	public void desert(String name);
+	
+}
+class student22 extends movie implements restarent
+{
+
+	
+	public void food(String foodname) 
+	{
+		System.out.println(foodname);
+		
+	}
+
+	
+	public void desert(String desertname) 
+	{
+		System.out.println(desertname);
+	}
+
+	
+	public void hero() 
+	{
+		System.out.println("ram");
+	}
+
+	
+	public void heroine() 
+	{
+		System.out.println("alia");
+		
+	}
+	
+}
+public class absta_inter {
+
+	public static void main(String[] args) 
+	{
+		System.out.println("enter food name");
+		System.out.println("enter name");
+		System.out.println("enter desertname");
+		String name;
+		String foodname;
+		String desertname;
+		Scanner s=new Scanner(System.in);
+		name=s.next();
+		foodname=s.next();
+	 desertname=s.next();
+	 student22 k=new student22();
+	 k.desert(desertname);
+	 k.director(name);
+	 k.food(foodname);
+	 k.hero();
+	 k.heroine();
+	}
+
+}

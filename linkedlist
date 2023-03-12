@@ -1,0 +1,31 @@
+package sunny;
+import java.util.*;
+public class linkedlist 
+{
+
+	public static void main(String[] args)
+	{
+		
+		LinkedList<Integer> k=new LinkedList<Integer>();//*syntax 
+		k.add(90120);//*adding integer
+		k.add(90068);
+	    System.out.println(k);
+        k.add(1,90109);//*adding integer with index
+        System.out.println(k);
+        k.addLast(90136);//*adding integer last
+        System.out.println(k);
+        k.removeFirst();//*removing integer first
+        System.out.println(k);
+        k.removeLast();//*removing integer last
+        System.out.println(k);
+        System.out.println(k.getFirst());//*getting first element
+        System.out.println(k.getLast());//*getting last element
+        Collections.sort(k);// sorting linkedlist
+        System.out.println(k);
+        Collections.reverse(k);// *reversing a linkedlist
+        System.out.println(k);
+       System.out.println(k.peek());//*top element
+        
+        
+}
+}

@@ -1,0 +1,47 @@
+package sunny;
+import java.util.*;
+  class employeeklu implements Comparable <employeeklu>
+{
+	int id;
+	String name;
+	double salary;
+	public employeeklu(int id,String name,double salary)
+	{
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	}
+	
+
+	public int  compareTo(employeeklu o) 
+	{
+		if(salary>o.salary)
+		{
+			return 1;
+		} 
+		else if(salary<o.salary)
+		{
+			return -1;
+		}
+		else
+			return 0;
+		
+	}
+}
+public class comparable {
+
+	public static void main(String[] args) 
+    { 
+		ArrayList<employeeklu> a=new ArrayList<employeeklu>();
+		a.add(new employeeklu(127,"sunny",10000));
+		a.add(new employeeklu(125,"bunny",99999));
+		a.add(new employeeklu(123,"pavan",50000));
+		a.add(new employeeklu(128,"ajay",99987));
+		Collections.sort(a);
+		for(employeeklu o:a)
+		{
+			System.out.println("id is"+o.id+" salary is"+o.salary+       " name is"+o.name);
+		}
+	}
+
+}

@@ -1,0 +1,79 @@
+package sunny;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+class bunny
+{
+	 int id;
+	private String name;
+	 double salary;
+	public bunny(int id,String name,double salary)
+	{
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	}
+}
+class  idsorting implements Comparator<bunny>
+{
+	public int compare(bunny s1,bunny s2)
+	{
+		if(s1.id>s2.id)
+		{
+			return 1;
+		}
+		else if(s1.id<s2.id)
+		{
+			return -1;
+		}
+		else 
+		{
+			return 0;
+		}
+	}}
+	class  salsorting implements Comparator<bunny>
+	{
+		public int compare(bunny s1,bunny s2)
+		{
+			if(s1.salary>s2.salary)
+			{
+				return 1;
+			}
+			else if(s1.salary<s2.salary)
+			{
+				return -1;
+			}
+			else 
+			{
+				return 0;
+			}
+		}
+	}
+public class comparator 
+{
+
+	public static void main(String[] args)
+	{
+	ArrayList<bunny> a=new ArrayList<bunny>();
+	a.add(new bunny(90120,"bunny",79000));
+	a.add(new bunny(90109,"gun",790));
+	a.add(new bunny(90068,"banthulu",990));
+	a.add(new bunny(90136,"reshma",690));
+	a.add(new bunny(90114,"pavan",590));
+      System.out.println("id based sorting");
+	Collections.sort(a,new idsorting());
+	for(bunny s:a)
+	{
+		System.out.println(s.id);
+	}
+	System.out.println("salary based sorting");
+	Collections.sort(a,new salsorting());
+	for(bunny s:a)
+	{
+		System.out.println(s.salary);
+	}
+	}
+
+}

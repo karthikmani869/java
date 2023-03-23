@@ -1,0 +1,45 @@
+package sunny;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import javax.swing.*;
+public class GUi_exp 
+{
+	public static void main(String[] args) 
+	{
+		JFrame a=new JFrame();
+		
+		JButton k=new JButton("submit");
+		JButton b=new JButton("cancel");
+		
+		k.setBounds(150, 150, 100,50);
+		k.setBackground(Color.red);
+		b.setBounds(100, 130, 70, 80);
+		k.addActionListener(new ActionListener()
+				{
+				public void actionPerformed(ActionEvent e)
+				{
+					
+					k.setIcon(new ImageIcon("C:\\Users\\KARTHIK MANI\\Desktop\\11.jpg"));
+			k.setBounds(350, 100, 1980, 1080);
+			k.setVisible(true);
+					
+				}
+				});
+		b.addActionListener(new ActionListener()
+		{
+		public void actionPerformed(ActionEvent e)
+		{
+			b.setText("you have cancled the file");
+			
+		}
+		});
+		a.add(b);
+		a.add(k);
+		
+		b.setBackground(Color.BLUE);
+		a.setLayout(null);
+		a.setVisible(true);
+	}
+}

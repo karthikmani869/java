@@ -1,0 +1,82 @@
+package sunny;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class GUI_ARTHEMETIC implements ActionListener
+{
+	JButton b1,b2,b3,b4,b5;
+	JTextField t1,t2,t3;
+	public GUI_ARTHEMETIC ()
+	{
+		JFrame k=new JFrame();
+		k.setSize(600, 600);
+		b1=new JButton("+");
+		b2=new JButton("-");
+		b3=new JButton("*");
+		b4=new JButton("/");
+		b5=new JButton("%");
+		t1=new JTextField();
+		t3=new JTextField();
+		t2=new JTextField();
+		t1.setBounds(50, 100, 100, 30);
+		t2.setBounds(50, 150, 100, 30);
+		t3.setBounds(50, 200, 100, 30);
+		b1.setBounds(50, 300, 100, 30);
+		b2.setBounds(50, 350, 100, 30);
+		b3.setBounds(50, 400, 100, 30);
+		b4.setBounds(50, 450, 100, 30);
+		b5.setBounds(50, 500, 100, 30);
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);
+		b5.addActionListener(this);
+		k.add(b1);
+		k.add(b2);
+		k.add(b3);
+		k.add(b4);
+		k.add(b5);
+		k.add(t1);
+		k.add(t2);
+		k.add(t3);
+		k.setLayout(null);
+		k.setVisible(true);
+	}
+		public void actionPerformed(ActionEvent e) {
+			String s1=t1.getText();
+			String s2=t2.getText();
+			int a,b,c;
+			a=Integer.parseInt(s1);
+			b=Integer.parseInt(s2);
+			if(e.getSource()==b1)
+				c=a+b;
+			else if(e.getSource()==b2)
+				c=a+b;
+			else if(e.getSource()==b3)
+				c=a+b;
+			else if(e.getSource()==b4)
+				c=a+b;
+			else 
+				{
+				c=a+b;
+				}
+			String s3=String.valueOf(c);
+			t3.setText(s3);
+			
+			
+		}
+	
+
+	public static void main(String[] args) {
+		GUI_ARTHEMETIC m=new GUI_ARTHEMETIC();
+
+	}
+
+	
+	
+}

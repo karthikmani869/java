@@ -1,0 +1,34 @@
+package bunny;
+import java.util.*;
+class bunny extends Exception
+{
+	bunny(String s)
+	{
+		super (s);
+	}
+}
+public class own_exe {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter age");
+		int age;
+		age=in.nextInt();
+		try
+		{
+			if(age<18||age>40)
+			{
+				String s="age limit exceeded";
+				bunny p=new bunny(s);
+				throw p;
+				
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
+	}
+
+}

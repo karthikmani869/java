@@ -1,0 +1,26 @@
+package sunny;
+
+public class try_catch_finally {
+
+	public static void main(String[] args) {
+		int a[]=new int[5];
+		String s=null;
+		int z=10,b=0,c;
+		try
+		{
+			a[7]=3;
+			System.out.println(s.length());
+			c=z/b;
+		}
+        catch(Exception e)
+		{
+        	System.out.println(e);
+        	
+		}
+		finally
+		{
+			System.out.println("hello");
+		}
+	}
+
+}

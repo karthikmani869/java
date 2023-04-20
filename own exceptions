@@ -1,0 +1,39 @@
+package sunny;
+
+import java.util.Scanner;
+
+class ageException extends Exception
+{
+	ageException(String s)
+	{
+		super(s);
+	}
+}
+public class own_exeption {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		int age;
+		System.out.println("enter age");
+		age=in.nextInt();
+		try
+		{
+			if(age<18||age>40) 
+			{
+				String s="age limit exceeded";
+				ageException p=new ageException(s);
+				throw p;
+			}
+			else 
+			{
+				System.out.println("allow for vote");
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+
+	}
+
+}
